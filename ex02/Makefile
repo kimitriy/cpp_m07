@@ -10,23 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	intern
+NAME		=	array
 
-HEADER		=	Bureaucrat.hpp \
-				Form.hpp \
-				ShrubberyCreationForm.hpp \
-				RobotomyRequestForm.hpp \
-				PresidentialPardonForm.hpp \
-				Intern.hpp \
+HEADER		=	Array.hpp \
 
 SRC 		= 	main.cpp \
-				Bureaucrat.cpp \
-				Form.cpp \
-				ShrubberyCreationForm.cpp \
-				ascii_tree.cpp \
-				RobotomyRequestForm.cpp \
-				PresidentialPardonForm.cpp \
-				Intern.cpp \
+				Array.cpp \
 
 OBJS		= ${SRC:.cpp=.o}
 
