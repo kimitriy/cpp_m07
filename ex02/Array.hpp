@@ -4,6 +4,7 @@
 
 # include <iostream>
 # include <string>
+# include "MyException.hpp"
 
 # define RESET "\033[0m"
 
@@ -20,7 +21,8 @@ template <class T>
 class Array
 {
 	private:
-		T	*m_arr;
+		T				*m_arr;
+		unsigned int	m_len;
 	public:
 		Array(void);
 
@@ -32,41 +34,39 @@ class Array
 
 		Array & operator= (const Array & other);
 
-		bool	operator== (Array const & other) const
-		{
-			return (this->m_n == other.m_n);
-		}
+		// bool	operator== (Array const & other) const
+		// {
+		// 	return (this->m_n == other.m_n);
+		// }
 
-		bool	operator!= (Array const & other) const
-		{
-			return (this->m_n != other.m_n);
-		}
+		// bool	operator!= (Array const & other) const
+		// {
+		// 	return (this->m_n != other.m_n);
+		// }
 
-		bool	operator> (Array const & other) const
-		{
-			return (this->m_n > other.m_n);
-		}
+		// bool	operator> (Array const & other) const
+		// {
+		// 	return (this->m_n > other.m_n);
+		// }
 
-		bool	operator< (Array const & other) const
-		{
-			return (this->m_n < other.m_n);
-		}
+		// bool	operator< (Array const & other) const
+		// {
+		// 	return (this->m_n < other.m_n);
+		// }
 
-		bool	operator>= (Array const & other) const
-		{
-			return (this->m_n >= other.m_n);
-		}
+		// bool	operator>= (Array const & other) const
+		// {
+		// 	return (this->m_n >= other.m_n);
+		// }
 
-		bool	operator<= (Array const & other) const
-		{
-			return (this->m_n <= other.m_n);
-		}
+		// bool	operator<= (Array const & other) const
+		// {
+		// 	return (this->m_n <= other.m_n);
+		// }
 
-		// template <typename T>
-		T getVal(void) const
-		{
-			return (m_n);
-		}
+		T & operator[] (unsigned int indx) const;
+
+		unsigned int	size(void) const;
 };
 
 //[<<] operator overload

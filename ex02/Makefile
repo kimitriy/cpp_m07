@@ -13,9 +13,12 @@
 NAME		=	array
 
 HEADER		=	Array.hpp \
+				MyException.hpp \
 
 SRC 		= 	main.cpp \
 				Array.cpp \
+				ArrayTemplates.cpp \
+				MyException.cpp \
 
 OBJS		= ${SRC:.cpp=.o}
 
