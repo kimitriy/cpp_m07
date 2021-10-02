@@ -17,54 +17,47 @@
 # define F_R_WHT "\033[0;37m"
 
 template <class T>
-class SpecialType
+class Awesome
 {
 	private:
 		T	m_n;
 	public:
-		SpecialType(void)
-			: m_n()
-		{
+		Awesome(void) : m_n() {}
 
-		}
+		Awesome(T n) : m_n(n) {}
 
-		SpecialType(T n)
-			: m_n(n)
-		{
-
-		}
-
-		bool	operator== (SpecialType const & other) const
+		/*
+		bool	operator== (Awesome const & other) const
 		{
 			return (this->m_n == other.m_n);
 		}
 
-		bool	operator!= (SpecialType const & other) const
+		bool	operator!= (Awesome const & other) const
 		{
 			return (this->m_n != other.m_n);
 		}
 
-		bool	operator> (SpecialType const & other) const
+		bool	operator> (Awesome const & other) const
 		{
 			return (this->m_n > other.m_n);
 		}
 
-		bool	operator< (SpecialType const & other) const
+		bool	operator< (Awesome const & other) const
 		{
 			return (this->m_n < other.m_n);
 		}
 
-		bool	operator>= (SpecialType const & other) const
+		bool	operator>= (Awesome const & other) const
 		{
 			return (this->m_n >= other.m_n);
 		}
 
-		bool	operator<= (SpecialType const & other) const
+		bool	operator<= (Awesome const & other) const
 		{
 			return (this->m_n <= other.m_n);
 		}
+		*/
 
-		// template <typename T>
 		T getVal(void) const
 		{
 			return (m_n);
@@ -73,7 +66,7 @@ class SpecialType
 
 //[<<] operator overload
 template <typename T>
-std::ostream& operator<< ( std::ostream& out, const SpecialType<T> & st )
+std::ostream& operator<< ( std::ostream& out, const Awesome<T> & st )
 {
 	out << st.getVal();
 	return (out);
