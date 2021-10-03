@@ -21,8 +21,8 @@ template <class T>
 class Array
 {
 	private:
-		T				*m_arr;
 		unsigned int	m_len;
+		T				*m_arr;
 	public:
 		Array(void);
 
@@ -32,66 +32,11 @@ class Array
 
 		~Array(void);
 
-		Array & operator= (const Array & other);
+		Array operator=(const Array & other);
 
-		// bool	operator== (Array const & other) const
-		// {
-		// 	return (this->m_n == other.m_n);
-		// }
+		T &operator[](unsigned int indx);
 
-		// bool	operator!= (Array const & other) const
-		// {
-		// 	return (this->m_n != other.m_n);
-		// }
-
-		// bool	operator> (Array const & other) const
-		// {
-		// 	return (this->m_n > other.m_n);
-		// }
-
-		// bool	operator< (Array const & other) const
-		// {
-		// 	return (this->m_n < other.m_n);
-		// }
-
-		// bool	operator>= (Array const & other) const
-		// {
-		// 	return (this->m_n >= other.m_n);
-		// }
-
-		// bool	operator<= (Array const & other) const
-		// {
-		// 	return (this->m_n <= other.m_n);
-		// }
-
-		T & operator[] (unsigned int indx) const;
-
-		unsigned int	size(void) const;
+		unsigned int	getSize(void) const;
 };
-
-//[<<] operator overload
-template <typename T>
-std::ostream& operator<< ( std::ostream& out, const Array<T> & st )
-{
-	out << st.getVal();
-	return (out);
-}
-
-template <typename T>
-void	printItem( const T & val )
-{
-	std::cout << F_R_PRPL << val << RESET << std::endl;
-}
-
-template <typename T>
-void	iter(T *arr, int len, void (*fptr)( const T & ))
-{
-	int	i = 0;
-	while (i < len)
-	{
-		fptr(arr[i]);
-		i++;
-	}
-}
 
 #endif
