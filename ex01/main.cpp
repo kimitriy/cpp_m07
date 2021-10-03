@@ -42,22 +42,22 @@ int		main()
 
 //USER TYPE//////////
 
-	Awesome<char> arr[10] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k'};
+	// Awesome<char> arr[10] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k'};
 	// Awesome<int> arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	// Awesome<float> arr[10] = {1.1f, 2.2f, 3.3f, 4.4f, 5.5f, 6.6f, 7.7f, 8.8f, 9.9f, 10.1f};
 	// Awesome<double> arr[10] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 10.1};
 	
-	// Awesome<std::string> arr[10];
-	// arr[0] = Awesome<std::string>("one");
-	// arr[1] = Awesome<std::string>("two");
-	// arr[2] = Awesome<std::string>("three");
-	// arr[3] = Awesome<std::string>("four");
-	// arr[4] = Awesome<std::string>("five");
-	// arr[5] = Awesome<std::string>("six");
-	// arr[6] = Awesome<std::string>("seven");
-	// arr[7] = Awesome<std::string>("eight");
-	// arr[8] = Awesome<std::string>("nine");
-	// arr[9] = Awesome<std::string>("ten");
+	Awesome<std::string> *arr = new Awesome<std::string>[10];
+	arr[0] = Awesome<std::string>("one");
+	arr[1] = Awesome<std::string>("two");
+	arr[2] = Awesome<std::string>("three");
+	arr[3] = Awesome<std::string>("four");
+	arr[4] = Awesome<std::string>("five");
+	arr[5] = Awesome<std::string>("six");
+	arr[6] = Awesome<std::string>("seven");
+	arr[7] = Awesome<std::string>("eight");
+	arr[8] = Awesome<std::string>("nine");
+	arr[9] = Awesome<std::string>("ten");
 
 	// std::string	tmp[10] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
 	// Awesome<char *> arr[10];
